@@ -10,11 +10,11 @@ import UIKit
 class ExercisesTableVC: UIViewController {
 
     
-    var exercises: [String] = ["Push-ups", "Pull-ups", "Squats"]
+    var exercises: [String] = ["Push-ups", "Pull-ups", "Squats", "Burpees"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       print("dfsd")
+      
     }
 }
 

@@ -16,6 +16,8 @@
 		63A3722B2C67C3EB00BBF223 /* SelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3722A2C67C3EB00BBF223 /* SelectionVC.swift */; };
 		63A372312C67CBB700BBF223 /* ExercisesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A372302C67CBB700BBF223 /* ExercisesTableVC.swift */; };
 		63A372332C6803FC00BBF223 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A372322C6803FC00BBF223 /* Data.swift */; };
+		63A372352C680F1D00BBF223 /* NotesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A372342C680F1D00BBF223 /* NotesTableVC.swift */; };
+		63A372372C682B5A00BBF223 /* WorkOutDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A372362C682B5A00BBF223 /* WorkOutDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		63A3722A2C67C3EB00BBF223 /* SelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionVC.swift; sourceTree = "<group>"; };
 		63A372302C67CBB700BBF223 /* ExercisesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesTableVC.swift; sourceTree = "<group>"; };
 		63A372322C6803FC00BBF223 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		63A372342C680F1D00BBF223 /* NotesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableVC.swift; sourceTree = "<group>"; };
+		63A372362C682B5A00BBF223 /* WorkOutDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				63A372152C67C31600BBF223 /* SceneDelegate.swift */,
 				63A3722A2C67C3EB00BBF223 /* SelectionVC.swift */,
 				63A372302C67CBB700BBF223 /* ExercisesTableVC.swift */,
+				63A372342C680F1D00BBF223 /* NotesTableVC.swift */,
+				63A372362C682B5A00BBF223 /* WorkOutDetailVC.swift */,
 				63A372192C67C31600BBF223 /* Main.storyboard */,
 				63A3721F2C67C31800BBF223 /* Assets.xcassets */,
 				63A372212C67C31800BBF223 /* LaunchScreen.storyboard */,
@@ -153,6 +159,8 @@
 				63A372142C67C31600BBF223 /* AppDelegate.swift in Sources */,
 				63A372162C67C31600BBF223 /* SceneDelegate.swift in Sources */,
 				63A3722B2C67C3EB00BBF223 /* SelectionVC.swift in Sources */,
+				63A372352C680F1D00BBF223 /* NotesTableVC.swift in Sources */,
+				63A372372C682B5A00BBF223 /* WorkOutDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

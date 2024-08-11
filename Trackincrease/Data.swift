@@ -7,7 +7,25 @@
 
 import Foundation
 
-class Note {
+struct Workout {
+    var date: Date
+    var exercises: [Exercise]
+}
+
+struct Exercise {
+    var name: String
+    var sets: [SetSet]
+}
+
+struct SetSet {
+    var reps: Int
+    var weight: Double
+}
+
+
+
+
+/* class Note {
     var date: Date
     var exerciseName: String
     var reps : [Int]
@@ -21,8 +39,10 @@ class Note {
 }
 
     var notes = [
-        Note(date: Date(timeIntervalSinceReferenceDate: 10298397), exerciseName: "Pull-up", reps: 12, weight: 0),
-        Note(date: Date(timeIntervalSinceReferenceDate: 10298397), exerciseName: "Sit-up", reps: 20, weight: 0),
-        Note(date: Date(timeIntervalSinceReferenceDate: 10298397), exerciseName: "Burpee", reps: 10, weight: 0),
-        Note(date: Date(timeIntervalSinceReferenceDate: 10298397), exerciseName: "Pull-up", reps: 10, weight: 0)
+        Note(date: Date(timeIntervalSinceReferenceDate: 10298397), exerciseName: "Pull-ups", reps: 12, weight: 0),
+        Note(date: Date(timeIntervalSinceReferenceDate: 10298397), exerciseName: "Sit-ups", reps: 20, weight: 0),
+        Note(date: Date(timeIntervalSinceReferenceDate: 10298397), exerciseName: "Burpees", reps: 10, weight: 0),
+        Note(date: Date(timeIntervalSinceReferenceDate: 10298397), exerciseName: "Squats", reps: 10, weight: 65)
     ]
+
+ */

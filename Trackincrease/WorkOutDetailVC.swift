@@ -8,22 +8,36 @@
 import UIKit
 
 class WorkOutDetailVC: UIViewController {
+    
+    var workOutToGet: Workout?
 
+    @IBOutlet var detailLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let worrrk = workOutToGet
+        print(worrrk ?? "NIH")
+        showDetails(workout: worrrk!)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showDetails(workout: Workout){
+        let workout = workout
+        var detailsString = "\(workout.date)"
+        
+        for exersise in workout.exercises{
+            detailsString += "\n\n\(exersise.name)"
+            let sets = exersise.sets
+            
+            for setSet in exersise.sets{
+                let reps = setSet.reps
+                detailsString += "\n\(reps)"
+                
+                let weight = setSet.weight
+                if weight != 0.0{
+                    detailsString += " x \(weight)"
+                }
+            }
+        }
+        detailLabel.text = detailsString
     }
-    */
-
 }
