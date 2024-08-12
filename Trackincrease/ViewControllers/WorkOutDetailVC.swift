@@ -26,8 +26,6 @@ class WorkOutDetailVC: UIViewController {
         
         for exersise in workout.exercises{
             detailsString += "\n\n\(exersise.name)"
-            let sets = exersise.sets
-            
             for setSet in exersise.sets{
                 let reps = setSet.reps
                 detailsString += "\n\(reps)"

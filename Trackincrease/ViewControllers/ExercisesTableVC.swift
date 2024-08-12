@@ -16,6 +16,11 @@ class ExercisesTableVC: UIViewController {
         super.viewDidLoad()
       
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as! ActualWorkingOutVC 
+        destVC.dataToGet = sender as? String
+    }
 }
 
 
@@ -35,7 +40,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
      
 }
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-  //  let smth = smth[indexPath.row]
-  //  performSegue(withIdentifier: Segues.toDetail, sender: smth)
+   let dataToSend = exercises[indexPath.row]
+   performSegue(withIdentifier: "ToActualWorkingOutVC", sender: dataToSend)
 }
 }
