@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct Workout {
+struct WorkoutStruct {
     var date: Date
-    var exercises: [Exercise]
+    var exercises: [ExerciseItem]
 }
 
-struct Exercise {
+struct ExerciseItem {
     var name: String
-    var sets: [SetSet]
+    var sets: [SetItem]
 }
 
-struct SetSet {
+struct SetItem {
     var reps: Int
     var weight: Double
 }

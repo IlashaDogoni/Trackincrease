@@ -12,31 +12,31 @@ class NotesTableVC: UIViewController {
     
     let formatter = DateFormatter()
     
-    var workoutsList : [Workout] = [Workout(date: Date(timeIntervalSinceReferenceDate: 10298397), exercises: [Exercise(name: "Push-ups", sets: [SetSet(reps: 30, weight: 0.0)])])]
+    var workoutsList : [WorkoutStruct] = [WorkoutStruct(date: Date(timeIntervalSinceReferenceDate: 10298397), exercises: [ExerciseItem(name: "Push-ups", sets: [SetItem(reps: 30, weight: 0.0)])])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        var workout = Workout(date: Date(timeIntervalSinceReferenceDate: 10100000), exercises: [])
-        var exercise = Exercise(name: "Squats", sets: [])
-        var set = SetSet(reps: 15, weight: 30.0)
+        var workout = WorkoutStruct(date: Date(timeIntervalSinceReferenceDate: 10100000), exercises: [])
+        var exercise = ExerciseItem(name: "Squats", sets: [])
+        var set = SetItem(reps: 15, weight: 30.0)
         exercise.sets.append(set)
-        set = SetSet(reps: 12, weight: 40.0)
+        set = SetItem(reps: 12, weight: 40.0)
         exercise.sets.append(set)
-        set = SetSet(reps: 8, weight: 50.0)
+        set = SetItem(reps: 8, weight: 50.0)
         exercise.sets.append(set)
-        set = SetSet(reps: 7, weight: 50.0)
+        set = SetItem(reps: 7, weight: 50.0)
         exercise.sets.append(set)
         workout.exercises.append(exercise)
 
-        exercise = Exercise(name: "Pull-ups", sets: [])
-        set = SetSet(reps: 6, weight: 0.0)
+        exercise = ExerciseItem(name: "Pull-ups", sets: [])
+        set = SetItem(reps: 6, weight: 0.0)
         exercise.sets.append(set)
-        set = SetSet(reps: 9, weight: 0.0)
+        set = SetItem(reps: 9, weight: 0.0)
         exercise.sets.append(set)
-        set = SetSet(reps: 8, weight: 0.0)
+        set = SetItem(reps: 8, weight: 0.0)
         exercise.sets.append(set)
-        set = SetSet(reps: 6, weight: 0.0)
+        set = SetItem(reps: 6, weight: 0.0)
         exercise.sets.append(set)
         workout.exercises.append(exercise)
         workoutsList.append(workout)
@@ -46,7 +46,7 @@ class NotesTableVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destVC = segue.destination as! WorkOutDetailVC
-        destVC.workOutToGet = sender as? Workout
+        destVC.workOutToGet = sender as? WorkoutStruct
     }
 
 }

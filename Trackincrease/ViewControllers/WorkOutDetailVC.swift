@@ -9,7 +9,7 @@ import UIKit
 
 class WorkOutDetailVC: UIViewController {
     
-    var workOutToGet: Workout?
+    var workOutToGet: WorkoutStruct?
 
     @IBOutlet var detailLabel: UILabel!
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class WorkOutDetailVC: UIViewController {
         
     }
     
-    func showDetails(workout: Workout){
+    func showDetails(workout: WorkoutStruct){
         let workout = workout
         var detailsString = "\(workout.date)"
         

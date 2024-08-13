@@ -10,7 +10,7 @@ import UIKit
 class ActualWorkingOutVC: UIViewController {
 
     var dataToGet : String?
-    var testWorkOut : Workout  = Workout(date: Date(), exercises: [])
+    var testWorkOut : WorkoutStruct  = WorkoutStruct(date: Date(), exercises: [])
     
     @IBOutlet var repsAmountTextField: UITextField!
     @IBOutlet var weightAmountTextField: UITextField!
@@ -24,16 +24,18 @@ class ActualWorkingOutVC: UIViewController {
     }
     
     func saveActualWorkOut(){
-        var newWorkout = Workout(date: Date(), exercises: [])
-        var exercise = Exercise(name: self.title!, sets: [])
+        var newWorkout = WorkoutStruct(date: Date(), exercises: [])
+        var exercise = ExerciseItem(name: self.title!, sets: [])
         let reps = NumberFormatter().number(from: repsAmountTextField.text!) as! Int
         var weight : Double = 0.0
+        var weightString : String = weightAmountTextField.text ?? "Empty string"
+        weightString = weightString.replacingOccurrences(of: ",", with: ".")
 
-        if let actualWeight = Double(weightAmountTextField.text!){
+        if let actualWeight = Double(weightString){
             weight = actualWeight.cutOff()
         }
         
-        let set = SetSet(reps: reps, weight: weight)
+        let set = SetItem(reps: reps, weight: weight)
         exercise.sets.append(set)
         newWorkout.exercises.append(exercise)
         testWorkOut = newWorkout
