@@ -9,38 +9,21 @@ import UIKit
 
 class NotesTableVC: UIViewController {
 
-    
+    var receivedData   : [WorkoutStruct]?
+    var workoutsList : [WorkoutStruct] = []
     let formatter = DateFormatter()
     
-    var workoutsList : [WorkoutStruct] = [WorkoutStruct(date: Date(timeIntervalSinceReferenceDate: 10298397), exercises: [ExerciseItem(name: "Push-ups", sets: [SetItem(reps: 30, weight: 0.0)])])]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        var workout = WorkoutStruct(date: Date(timeIntervalSinceReferenceDate: 10100000), exercises: [])
-        var exercise = ExerciseItem(name: "Squats", sets: [])
-        var set = SetItem(reps: 15, weight: 30.0)
-        exercise.sets.append(set)
-        set = SetItem(reps: 12, weight: 40.0)
-        exercise.sets.append(set)
-        set = SetItem(reps: 8, weight: 50.0)
-        exercise.sets.append(set)
-        set = SetItem(reps: 7, weight: 50.0)
-        exercise.sets.append(set)
-        workout.exercises.append(exercise)
-
-        exercise = ExerciseItem(name: "Pull-ups", sets: [])
-        set = SetItem(reps: 6, weight: 0.0)
-        exercise.sets.append(set)
-        set = SetItem(reps: 9, weight: 0.0)
-        exercise.sets.append(set)
-        set = SetItem(reps: 8, weight: 0.0)
-        exercise.sets.append(set)
-        set = SetItem(reps: 6, weight: 0.0)
-        exercise.sets.append(set)
-        workout.exercises.append(exercise)
-        workoutsList.append(workout)
-        //print(workoutsList)
+        if let data = receivedData {
+            workoutsList = receivedData!
+                    print("Received data: \(data)\n\n ________________________")
+        } else {
+            print("No data has been received")
+        }
+        
         
     }
     
